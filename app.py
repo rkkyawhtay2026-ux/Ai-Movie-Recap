@@ -15,7 +15,7 @@ api_key = st.text_input("🔑 Gemini API Key", type="password", help="Enter your
 if api_key:
     try:
         genai.configure(api_key=api_key)
-        model = genai.GenerativeModel('gemini-1.5-flash-latest')
+        model = genai.GenerativeModel('gemini-1.5-flash')
         st.success("🟢 Engine Connected!")
     except:
         st.error("🔴 Invalid API Key")
